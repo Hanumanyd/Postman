@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "db129594-82aa-4982-a56c-c9bee3c8ac70",
+		"name": "Scenario pass one request data to another rwquest data chaining",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13755152",
+		"_collection_link": "https://bold-astronaut-565434.postman.co/workspace/User_Management_Team~8637f1d9-574e-40d9-8693-75e38e5d5031/collection/13755152-db129594-82aa-4982-a56c-c9bee3c8ac70?action=share&source=collection_link&creator=13755152"
+	},
+	"item": [
+		{
+			"name": "GetReq",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"count id and print ids\", function()\r",
+							"{\r",
+							"     var count = jsonData.data.length;\r",
+							"    console.log(\"count of id is \" + count);\r",
+							"\r",
+							"    for(var id=0;id<count;id++)\r",
+							"    {\r",
+							"        console.log(\"id is\" + jsonData.data[id].id);\r",
+							"\r",
+							"    }\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getorderid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.globals.set(\"orderId\", jsonData.uuid);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://httpbin.org/uuid",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"uuid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\":\"{{orderId}}\",\r\n    \"products\":[\r\n        {\r\n            \"quantity\": 10,\r\n            \"productId\": 311\r\n        },\r\n        {\r\n             \"quantity\": 12,\r\n            \"productId\": 315\r\n        },\r\n        {\r\n             \"quantity\": 13,\r\n            \"productId\": 319\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://httpbin.org/post",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

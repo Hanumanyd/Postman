@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "97e8c790-2662-4fde-97e4-64b7eaf7f58f",
+		"name": "Santosh Mock Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13755152",
+		"_collection_link": "https://bold-astronaut-565434.postman.co/workspace/User_Management_Team~8637f1d9-574e-40d9-8693-75e38e5d5031/collection/13755152-97e8c790-2662-4fde-97e4-64b7eaf7f58f?action=share&source=collection_link&creator=13755152"
+	},
+	"item": [
+		{
+			"name": "get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://091cb675-9353-4213-a792-b4fedb2d5800.mock.pstmn.io/get",
+							"protocol": "https",
+							"host": [
+								"091cb675-9353-4213-a792-b4fedb2d5800",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "This is mock response built"
+				},
+				{
+					"name": "get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/get/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 May 2025 07:23:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=3f873940993e6a39"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=bdcfa5fd655ebf33"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1746948280"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-KDobYYnDWEn0jYHo/CAjQbErvUo\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "This is mock get response \r\n\r\n{\r\n    \"id\" :2\r\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Post",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/Post",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Post"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 May 2025 07:51:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "243"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=8b4d4b71c2e8e128"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=617b669518cdd5f0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "117"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1746949886"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"mockRequestNotFoundError\",\n        \"message\": \"Double check your method and the request path and try again. Learn more here: https://learning.postman.com/docs/design-apis/mock-apis/matching-algorithm/\",\n        \"header\": \"No matching requests\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://091cb675-9353-4213-a792-b4fedb2d5800.mock.pstmn.io"
+		}
+	]
+}
